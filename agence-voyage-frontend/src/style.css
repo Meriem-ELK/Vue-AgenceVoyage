@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;600&display=swap');
+
+@import "tailwindcss";
+
+  :root {
+    --primary-red: #0d9488;    
+    --primary-dark: #134e4a;     
+    --secondary-dark: #0f766e; 
+    --accent-gold: #f59e0b;     
+    --text-dark: #0f172a;      
+    --text-light: #64748b;       
+  }
+
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  body {
+    font-family: 'Raleway', sans-serif;
+    @apply text-gray-800 bg-white antialiased;
+  }
+
+/* ============================================
+   HERO SECTION
+============================================ */
+  .hero-section {
+    @apply relative h-120 flex items-center justify-center overflow-hidden;
+    background: linear-gradient(135deg, #134e4a 0%, #0f766e 50%, #0d9488 100%);
+  }
+
+  .hero-image-bg {
+    @apply absolute inset-0 z-0 opacity-90;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.7);
+    background-image: url(assets/images/hero-travel.jpg);
+  }
+
+  .hero-content {
+    @apply relative z-20 text-center px-6 max-w-5xl mx-auto;
+  }
+
+  .hero-title {
+    @apply text-2xl md:text-4xl lg:text-6xl font-bold text-white mb-6 leading-[1.1];
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    letter-spacing: -0.02em;
+  }
+
+  .hero-subtitle {
+    @apply text-sm md:text-lg text-white mb-10 max-w-3xl mx-auto leading-relaxed font-light;
+  }
+
+
+/* ============================================
+   BOUTONS
+============================================ */
+  .btn-secondary {
+    @apply bg-white text-[#134e4a] hover:bg-gray-50 font-semibold py-3 px-5 rounded-lg transition-all duration-300 transform shadow-lg uppercase border-2 text-sm border-white;
+  }
+
+  .btn-gold {
+    @apply bg-[#f59e0b] hover:bg-[#d97706] text-white font-bold py-3 px-5 rounded-lg transition-all duration-300 transform shadow-xl uppercase tracking-wide text-sm cursor-pointer;
+  }
+
+  .btn-close {
+    @apply bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-5 rounded-md cursor-pointer;
+  }
+
+  .btn-delete {
+    @apply bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-5 rounded-md cursor-pointer;
+  }
+
+/* ============================================
+   CARDS
+============================================ */
+  .card-feature {
+    @apply bg-white p-12 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#0d9488]/20;
+  }
+
+  .card-category {
+    @apply p-8 rounded-xl text-center transition-all duration-300 cursor-pointer transform hover:scale-110 hover:shadow-2xl border-2;
+  }
+
+
+/* ============================================
+   HEADER
+============================================ */
+  .header-gradient {
+    @apply bg-[#134e4a] shadow-xl border-b border-[#0d9488]/20;
+  }
+
+  .nav-link {
+    @apply text-lg px-5 py-2 rounded-lg font-medium transition-all duration-300 text-white/90 hover:text-white hover:bg-white/10;
+  }
+
+  .logo-text {
+    @apply text-3xl md:text-4xl font-bold text-white hover:text-[#f59e0b] transition-colors duration-300;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+
+/* ============================================
+   SECTION
+============================================ */
+  .section-title {
+    @apply text-xl md:text-3xl lg:text-4xl font-bold text-[#134e4a] mb-4 text-center;
+    letter-spacing: -0.02em;
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl text-gray-600 text-center max-w-3xl mx-auto mb-16 font-normal leading-relaxed;
+  }
+
+/* ============================================
+   FORMULAIRES
+============================================ */
+  .form-input {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#0d9488] focus:ring-2 focus:ring-[#0d9488]/20 focus:outline-none transition-all;
+  }
+
+  .form-textarea {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#0d9488] focus:ring-2 focus:ring-[#0d9488]/20 focus:outline-none transition-all resize-none;
+  }
+
+  .form-select {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#0d9488] focus:ring-2 focus:ring-[#0d9488]/20 focus:outline-none transition-all;
+  }
+
+  .form-label {
+    @apply block text-base font-semibold text-gray-700 mb-2;
+  }
+
+  .form-container {
+    @apply p-6 bg-white rounded-lg shadow-xl mb-8 border border-gray-200;
+  }
+
+/* ============================================
+   FOOTER
+============================================ */
+  .footer-title {
+    @apply text-lg font-semibold mb-4;
+  }
+  .footer-link {
+    @apply text-gray-400 hover:text-white transition-colors
+  } 
+
+
+/* ============================================
+============================================ */
+  .gradient-text {
+    @apply bg-gradient-to-r from-[#0d9488] to-[#0f766e] bg-clip-text text-transparent;
+  }
+
+/* ============================================
+   MOBILE
+============================================ */
+@media (max-width: 768px) {
+  .hero-title {
+    @apply text-4xl;
+  }
+
+  .section-title {
+    @apply text-3xl;
+  }
+
+  .card-feature {
+    @apply p-8;
+  }
+}
