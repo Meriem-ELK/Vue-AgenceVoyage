@@ -25,7 +25,7 @@
               <router-link to="/forfaits" class="footer-link">→ Nos forfaits</router-link>
             </li>
             <li>
-              <router-link to="/git init" class="footer-link">→ À propos</router-link>
+              <router-link to="/apropos" class="footer-link">→ À propos</router-link>
             </li>
           </ul>
         </div>
